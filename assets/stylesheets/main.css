@@ -307,6 +307,14 @@ p a {
 .nav {
   text-align: right;
 }
+.nav li {
+  display: inline-block;
+  margin: 0 10px;
+  /*vertical-align: top;*/
+}
+.nav li:last-child {
+  margin-right: 0;
+}
 
 /*
   ========================================
@@ -330,3 +338,20 @@ p a {
    background: linear-gradient(to right, #a1d3b0, #f6f1d3);
    padding: 44px 0 22px 0;
  }
+
+ /*
+  ========================================
+  Speakers
+  ========================================
+*/
+  
+.speaker {
+  margin-bottom: 44px;
+}
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
