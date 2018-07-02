@@ -1,0 +1,33 @@
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  &--white {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+  }
+  &--white:hover {
+    background: #fff;
+    color: $mainGreen;
+  }
+  &--green {
+    border: 0;
+    background: $mainGreen;
+    padding: 11px 30px;
+    font-size: 14px;
+  }
+  &--green:hover {
+    background: #77a198;
+  }
+}
