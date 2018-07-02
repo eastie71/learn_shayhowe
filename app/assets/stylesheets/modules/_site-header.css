@@ -1,5 +1,4 @@
 .site-header {
-  width: 100%;
   a {
     color: #fff;
   }
@@ -7,20 +6,17 @@
     color: $mainGreen;
   }
   &__logo {
-    margin: 0 auto;
-    top: 0;
     float: left;
     border-top: 4px solid $mainGreen;
-    padding: 40px 0 22px 0;
+    padding: 40px 0 8px 0;
     font-size: 48px;
     line-height: 44px;
     font-weight: 100;
     letter-spacing: .5px;
     text-transform: uppercase;
-    @mixin clearfix;
   }
   &__tagline {
-    margin: 20px 0 22px 0;
-    text-align: right;
+    float: right;
+    margin: 66px 0 22px 0;
   }
 }

@@ -834,10 +834,6 @@ textarea {
   margin-bottom: 22px;
 }
 
-.site-header {
-  width: 100%;
-}
-
 .site-header a {
     color: #fff;
   }
@@ -847,11 +843,9 @@ textarea {
   }
 
 .site-header__logo {
-    margin: 0 auto;
-    top: 0;
     float: left;
     border-top: 4px solid #648880;
-    padding: 40px 0 22px 0;
+    padding: 40px 0 8px 0;
     font-size: 48px;
     line-height: 44px;
     font-weight: 100;
@@ -859,15 +853,9 @@ textarea {
     text-transform: uppercase;
   }
 
-.site-header__logo::after {
-		content: "";
-		clear: both;
-		display: table;
-	}
-
 .site-header__tagline {
-    margin: 20px 0 22px 0;
-    text-align: right;
+    float: right;
+    margin: 66px 0 22px 0;
   }
 
 .wrapper {
@@ -877,6 +865,12 @@ textarea {
 	padding-right: 30px;
 }
 
+.wrapper::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
 /*
   ========================================
   Navigation
@@ -884,7 +878,7 @@ textarea {
 */
 
 .nav {
-  	text-align: right;
+  	float: right;
 }
 
 .nav ul {
