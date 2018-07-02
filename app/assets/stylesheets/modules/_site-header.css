@@ -6,17 +6,107 @@
     color: $mainGreen;
   }
   &__logo {
-    float: left;
+    margin-top: 28px;
+    margin-bottom: 15px;
+    text-align: center;
     border-top: 4px solid $mainGreen;
-    padding: 40px 0 8px 0;
-    font-size: 48px;
-    line-height: 44px;
+    padding-top: 30px;
+    font-size: 2.25rem;
+    line-height: 2rem;
     font-weight: 100;
     letter-spacing: .5px;
     text-transform: uppercase;
+
+    @mixin atSmall {
+      margin-top: 32px;
+      margin-bottom: 15px;
+      border-top: 4px solid $mainGreen;
+      padding: 40px 0 5px 0;
+      font-size: 3rem;
+      line-height: 2.75rem;
+      font-weight: 100;
+      letter-spacing: .5px;
+    }
+    
+    @mixin atMedium {
+      float: left;
+      margin-bottom: 38px;
+      text-align: left;
+      border-top: 4px solid $mainGreen;
+    }
   }
   &__tagline {
-    float: right;
-    margin: 66px 0 22px 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    @mixin atSmall {
+      font-size: 1.3rem;
+    }
+    @mixin atMedium {
+      float: right;
+      text-align: left;
+      margin: 66px 0 22px 0;
+    }
+  }
+  &__menu-icon {
+    width: 20px;
+    height: 19px;
+    /* background-color: #FFF; */
+    position: absolute;
+    /* Need this z-index line (10) as otherwise the icon is not clickable (goes behind) when the menu content is displayed */
+    z-index: 10;
+    top: 46px;
+    right: 30px;
+
+    /* Top Bar of the hamburger menu icon - using a pseudo element */
+    &::before {
+      /* Must have empty content in order for this element to be displayed */
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+      /* Set the transform pivot point to be the top left corner (needed for close-x modifier class) */
+      transform-origin: 0 0;
+      /* When transforming this top menu bar, have it done over 0.3 second (nice animation!) */
+      transition: transform 0.3s ease-out;
+    }
+
+    /* Middle Bar of the hamburger menu icon */
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+      /* When making this bar invisible (via the close-x modifier), want to have it disappear (via scaleX) from right to left, so set the
+         transform origin on the far left (rather than middle by default) */
+      transform-origin: 0 50%;
+      /* When making this middle menu bar invisible (using opacity and transform scaleX), have it done over 0.3 second (nice animation!) */
+      transition: all 0.3s ease-out;
+    }
+
+    /* Bottom Bar of the hamburger menu icon - using a pseudo element */
+    &::after {
+      /* Must have empty content in order for this element to be displayed */
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+      /* Set the transform pivot point to be the top left corner (needed for close-x modifier class) */
+      transform-origin: 0 100%;
+      /* When transforming this bottom menu bar, have it done over 0.3 second (nice animation!) */
+      transition: transform 0.3s ease-out;
+    }
+    @mixin atMedium {
+      display: none;
+    }
   }
 }

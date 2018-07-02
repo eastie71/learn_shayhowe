@@ -1,6 +1,7 @@
 .wrapper {
-	width: 1050px;
-	margin: 0 auto;
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 30px;
 	padding-right: 30px;
 	@mixin clearfix;
