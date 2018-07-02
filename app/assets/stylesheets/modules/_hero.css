@@ -1,0 +1,30 @@
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  color: #fff;
+  line-height: 44px;
+  padding: 22px 80px 66px 80px;
+  text-align: center;
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 100;
+  }
+}
+
+.hero 
+.teaser a:hover h3 {
+  color: #a9b2b9;
+}
+
+.teaser img {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 22px;
+}

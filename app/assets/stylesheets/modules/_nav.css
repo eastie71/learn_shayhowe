@@ -1,0 +1,29 @@
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  	text-align: right;
+  	ul {
+		margin: 0;
+		padding: 0;
+		@mixin clearfix;
+	}
+  	li {
+  		display: inline-block;
+  		margin: 0 10px;
+ 		vertical-align: top;
+  	}
+  	li:last-child {
+  		margin-right: 0;
+  	}
+
+  	&__primary {
+  		font-size: 0.875rem;
+		font-weight: 400;
+		letter-spacing: .5px;
+		text-transform: uppercase;
+  	}
+}

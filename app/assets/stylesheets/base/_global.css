@@ -14,6 +14,13 @@ body {
 * {
   box-sizing: border-box;
 }
+
+img {
+  /* this makes images always fit within the browser window - ie. so they dont scroll left to right when too large */
+  max-width: 100%;
+  max-height: auto;
+}
+
 /*
   ========================================
   Grid
@@ -143,35 +150,6 @@ p a {
 
 /*
   ========================================
-  Home
-  ========================================
-*/
-
-.hero {
-  color: #fff;
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
-  text-align: center;
-}
-.hero h2 {
-  font-size: 36px;
-}
-.hero p {
-  font-size: 24px;
-  font-weight: 100;
-}
-.teaser a:hover h3 {
-  color: #a9b2b9;
-}
-.teaser img {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 22px;
-  max-width: 100%
-}
-
-/*
-  ========================================
   Primary header
   ========================================
 */
@@ -224,24 +202,6 @@ p a {
   font-size: 14px;
   padding-bottom: 44px;
   padding-top: 44px;
-}
-
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-  text-align: right;
-}
-.nav li {
-  display: inline-block;
-  margin: 0 10px;
-  /*vertical-align: top;*/
-}
-.nav li:last-child {
-  margin-right: 0;
 }
 
 /*

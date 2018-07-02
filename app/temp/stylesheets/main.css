@@ -364,6 +364,12 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  /* this makes images always fit within the browser window - ie. so they dont scroll left to right when too large */
+  max-width: 100%;
+  max-height: auto;
+}
+
 /*
   ========================================
   Grid
@@ -506,39 +512,6 @@ p a {
 
 /*
   ========================================
-  Home
-  ========================================
-*/
-
-.hero {
-  color: #fff;
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 36px;
-}
-
-.hero p {
-  font-size: 24px;
-  font-weight: 100;
-}
-
-.teaser a:hover h3 {
-  color: #a9b2b9;
-}
-
-.teaser img {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 22px;
-  max-width: 100%
-}
-
-/*
-  ========================================
   Primary header
   ========================================
 */
@@ -592,26 +565,6 @@ p a {
   font-size: 14px;
   padding-bottom: 44px;
   padding-top: 44px;
-}
-
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-  text-align: right;
-}
-
-.nav li {
-  display: inline-block;
-  margin: 0 10px;
-  /*vertical-align: top;*/
-}
-
-.nav li:last-child {
-  margin-right: 0;
 }
 
 /*
@@ -847,3 +800,117 @@ textarea {
 .btn--green:hover {
     background: #77a198;
   }
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+.hero {
+  color: #fff;
+  line-height: 44px;
+  padding: 22px 80px 66px 80px;
+  text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+  }
+
+.hero p {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+.hero 
+.teaser a:hover h3 {
+  color: #a9b2b9;
+}
+
+.teaser img {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.site-header {
+  width: 100%;
+}
+
+.site-header a {
+    color: #fff;
+  }
+
+.site-header a:hover {
+    color: #648880;
+  }
+
+.site-header__logo {
+    margin: 0 auto;
+    top: 0;
+    float: left;
+    border-top: 4px solid #648880;
+    padding: 40px 0 22px 0;
+    font-size: 48px;
+    line-height: 44px;
+    font-weight: 100;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+  }
+
+.site-header__logo::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.site-header__tagline {
+    margin: 20px 0 22px 0;
+    text-align: right;
+  }
+
+.wrapper {
+	width: 1050px;
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+
+.nav {
+  	text-align: right;
+}
+
+.nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+.nav ul::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.nav li {
+  		display: inline-block;
+  		margin: 0 10px;
+ 		vertical-align: top;
+  	}
+
+.nav li:last-child {
+  		margin-right: 0;
+  	}
+
+.nav__primary {
+  		font-size: 0.875rem;
+		font-weight: 400;
+		letter-spacing: .5px;
+		text-transform: uppercase;
+  	}
