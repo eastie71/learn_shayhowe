@@ -4,7 +4,7 @@
   ========================================
 */
 body {
-  background: #293f50;
+  background: $mainBlueBackground;
   color: #888;
   font: 300 1rem/1.375rem "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

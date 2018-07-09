@@ -18,6 +18,9 @@ var nestedcss = require('postcss-nested');
 // one large file for the final web site
 var cssimport = require('postcss-import');
 
+// allow color function
+var csscolor = require('postcss-color-function');
+
 // mixins package allows you create reusable bits of code (CSS)
 // See "_mixins.css" file
 var mixins = require('postcss-mixins');
@@ -26,7 +29,7 @@ var hexrgba = require('postcss-hexrgba');
 gulp.task('styles', function() {
 	// postcss expects an array of plugins
 	return gulp.src('./app/assets/stylesheets/styles.css')
-			.pipe(postcss([cssimport, mixins, cssvars, nestedcss, hexrgba, autoprefixer]))
+			.pipe(postcss([cssimport, mixins, cssvars, nestedcss, hexrgba, autoprefixer, csscolor]))
 			.on('error', function (errorInfo) {
 				// Log some info on the error that occurred. (so you can debug problems in your css)
 				console.log(errorInfo.toString());

@@ -105,8 +105,75 @@
       /* When transforming this bottom menu bar, have it done over 0.3 second (nice animation!) */
       transition: transform 0.3s ease-out;
     }
+
+    &--deactive {
+      &::before {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .site-header__menu-icon__middle {
+        opacity: 0;
+        /* shrink bar to 0 size */
+        transform: scaleX(0);
+      }
+      &::after {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+    }
+
+    &__close {
+      &::before {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      color: #fff;
+      visibility: visible;
+      font-size: 28px;
+      font-weight: 400;
+      cursor: pointer;
+      &:hover {
+        color: $mainGreen;
+      }
+    }
+
     @mixin atMedium {
       display: none;
+    }
+  }
+
+  &__menu {
+    background-color: color($mainBlueBackground a(88%) b(+5%));
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    padding-bottom: 20px;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    padding-top: 45px;
+    top: 0px;
+    line-height: 175%;
+    /* Have the menu content fade-in over 0.3 seconds (across ALL properties) */
+    transition: all 0.3s ease-out;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @mixin atSmall {
+      padding-top: 70px;
+    }
+
+    @mixin atMedium {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      background-color: transparent;
+      float: right;
+      padding: 0;
+      top: 0;
     }
   }
 }

@@ -970,10 +970,88 @@ textarea {
       transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
     }
 
+.site-header__menu-icon--deactive::before {
+        opacity: 0;
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+      }
+
+.site-header__menu-icon--deactive .site-header__menu-icon__middle {
+        opacity: 0;
+        /* shrink bar to 0 size */
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+      }
+
+.site-header__menu-icon--deactive::after {
+        opacity: 0;
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+      }
+
+.site-header__menu-icon__close {
+      color: #fff;
+      visibility: visible;
+      font-size: 28px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+.site-header__menu-icon__close::before {
+        opacity: 0;
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+      }
+
+.site-header__menu-icon__close:hover {
+        color: #648880;
+      }
+
 @media (min-width: 800px) {
 
 .site-header__menu-icon {
       display: none
+  }
+	}
+
+.site-header__menu {
+    background-color: rgba(41, 55, 66, 0.88);
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    padding-bottom: 20px;
+    left: 0;
+    right: 0;
+    padding-left: 30px;
+    padding-top: 45px;
+    top: 0px;
+    line-height: 175%;
+    /* Have the menu content fade-in over 0.3 seconds (across ALL properties) */
+    transition: all 0.3s ease-out;
+  }
+
+.site-header__menu--active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+@media (min-width: 530px) {
+
+.site-header__menu {
+      padding-top: 70px
+  }
+	}
+
+@media (min-width: 800px) {
+
+.site-header__menu {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      background-color: transparent;
+      float: right;
+      padding: 0;
+      top: 0
   }
 	}
 
@@ -998,7 +1076,7 @@ textarea {
 */
 
 .nav {
-    display: none;
+    display: block;
 }
 
 @media (min-width: 800px) {
@@ -1021,10 +1099,17 @@ textarea {
 	}
 
 .nav li {
-  		display: inline-block;
-  		margin: 0 10px;
-      vertical-align: top;
+      list-style: none;
   	}
+
+@media (min-width: 800px) {
+
+.nav li {
+        display: inline-block;
+  		  margin: 0 10px;
+        vertical-align: top
+  	}
+	}
 
 .nav li:last-child {
   		margin-right: 0;
