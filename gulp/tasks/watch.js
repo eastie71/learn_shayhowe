@@ -35,11 +35,12 @@ gulp.task('watch', function() {
 // this injects the CSS without even performing a refresh of the page! 
 // need to use "return" here as it is "gulp.src()" is an async function
 // Before running the inject - it must perform any POSTCSS required (in "styles" task)
-gulp.task('cssInject', ['styles'], function () {
+gulp.task('cssInject', gulp.series('styles', function() {
 	return gulp.src('./app/temp/stylesheets/main.css')
 			.pipe(browsersync.stream());
-});
+}));
 
-gulp.task('scriptsRefresh', ['scripts'], function () {
+
+gulp.task('scriptsRefresh', gulp.series('scripts', function () {
 	browsersync.reload();
-})
+}));
