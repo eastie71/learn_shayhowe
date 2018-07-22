@@ -27,9 +27,9 @@ gulp.task('watch', function() {
 		gulp.start('cssInject');
 	});
 
-//	watch('./app/assets/scripts/**/*.js', function () {
-//		gulp.start('scriptsRefresh');
-//	});
+	watch('./app/assets/scripts/**/*.js', function () {
+		gulp.start('scriptsRefresh');
+	});
 });
 
 // this injects the CSS without even performing a refresh of the page! 
@@ -40,6 +40,6 @@ gulp.task('cssInject', ['styles'], function () {
 			.pipe(browsersync.stream());
 });
 
-//gulp.task('scriptsRefresh', ['scripts'], function () {
-//	browsersync.reload();
-//})
+gulp.task('scriptsRefresh', ['scripts'], function () {
+	browsersync.reload();
+})
