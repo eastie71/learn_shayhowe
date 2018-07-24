@@ -128,10 +128,14 @@
         transform: scaleX(0);
       }
       color: #fff;
-      visibility: visible;
+      visibility: hidden;
       font-size: 28px;
       font-weight: 400;
       cursor: pointer;
+      &--active {
+        opacity: 1;
+        visibility: visible;
+      }
       &:hover {
         color: $mainGreen;
       }
@@ -144,8 +148,8 @@
 
   &__menu {
     background-color: color($mainBlueBackground a(88%) b(+5%));
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     padding-bottom: 20px;
     left: 0;

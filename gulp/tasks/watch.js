@@ -23,13 +23,10 @@ gulp.task('watch', function() {
 	});
 
 	// Watch for changes to any css files under styles folder (including ANY sub-folders)
-	watch('./app/assets/stylesheets/**/*.css', function() {
-		gulp.start('cssInject');
-	});
+	watch('./app/assets/stylesheets/**/*.css', gulp.series('cssInject'));
 
-	watch('./app/assets/scripts/**/*.js', function () {
-		gulp.start('scriptsRefresh');
-	});
+	// Watch for changes to any js files under scripts folder (including ANY sub-folders)
+	watch('./app/assets/scripts/**/*.js', gulp.series('scriptsRefresh'));
 });
 
 // this injects the CSS without even performing a refresh of the page! 
@@ -41,6 +38,7 @@ gulp.task('cssInject', gulp.series('styles', function() {
 }));
 
 
-gulp.task('scriptsRefresh', gulp.series('scripts', function () {
+gulp.task('scriptsRefresh', gulp.series('scripts', function (done) {
 	browsersync.reload();
+	done();
 }));
