@@ -81,11 +81,25 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _jquery2.default)("#headerContent").load("header.html");
+
+/***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10455,95 +10469,6 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _jquery = __webpack_require__(1);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _MobileMenu = __webpack_require__(3);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _MobileMenu2.default();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(1);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-	function MobileMenu() {
-		_classCallCheck(this, MobileMenu);
-
-		// This caused me several hours of grief!!!
-		// Cannot call the constructor until the PAGE is ready - not just the DOM
-		// Needed to do this because I am loading the <header> section through a jQuery "load" and
-		// inside the <header> is elements that are referred to in the constructor
-		// Without waiting for the entire page to load - it does not work. (I believe it is bc it
-		// cannot find the elements to bind to)
-		(0, _jquery2.default)(window).on("load", this.constructor_setup.bind(this));
-	}
-
-	_createClass(MobileMenu, [{
-		key: "constructor_setup",
-		value: function constructor_setup() {
-			this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
-			this.closeIcon = (0, _jquery2.default)(".site-header__menu-icon__close");
-			this.menuContent = (0, _jquery2.default)(".site-header__menu");
-			// map the events for this object
-			this.events();
-		}
-	}, {
-		key: "events",
-		value: function events() {
-			// map the click event to the toggleTheMenu method
-			// Need to use the "bind" method to be able to access the "menuContent" element inside the
-			// toggleTheMenu method
-			this.menuIcon.click(this.toggleTheMenu.bind(this));
-		}
-
-		// Toggle between visible and invisible for the menu content, expanded/contracted,
-		// and the close X menu-icon (on/off)
-
-	}, {
-		key: "toggleTheMenu",
-		value: function toggleTheMenu() {
-			alert("Menu clicked!");
-			this.menuContent.toggleClass("site-header__menu--active");
-			this.closeIcon.toggleClass("site-header__menu-icon__close--active");
-			this.menuIcon.toggleClass("site-header__menu-icon--deactive");
-		}
-	}]);
-
-	return MobileMenu;
-}();
-
-exports.default = MobileMenu;
 
 /***/ })
 /******/ ]);

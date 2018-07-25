@@ -3,6 +3,7 @@
 module.exports = {
 	mode: 'none',
 	entry: {
+		header: "./app/assets/scripts/header.js",
 		app: "./app/assets/scripts/app.js",
 		Vendor: "./app/assets/scripts/Vendor.js"
 	},
