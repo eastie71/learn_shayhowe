@@ -907,6 +907,7 @@ textarea {
     height: 19px;
     /* background-color: #FFF; */
     position: absolute;
+    cursor: pointer;
     /* Need this z-index line (10) as otherwise the icon is not clickable (goes behind) when the menu content is displayed */
     z-index: 10;
     top: 46px;
