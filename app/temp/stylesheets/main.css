@@ -512,32 +512,9 @@ p a {
 
 /*
   ========================================
-  Primary header
+  Primary footer
   ========================================
 */
-
-.logo {
-  float: left;
-  border-top: 4px solid #648880;
-  padding: 40px 0 22px 0;
-  font-size: 48px;
-  line-height: 44px;
-  font-weight: 100;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
-
-.tagline {
-  margin: 66px 0 22px 0;
-  text-align: right;
-}
-
-.primary-nav {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
 
 .primary-header a,
 .primary-footer a {
@@ -548,12 +525,6 @@ p a {
 .primary-footer a:hover {
   color: #648880;
 }
-
-/*
-  ========================================
-  Primary footer
-  ========================================
-*/
 
 .primary-footer small {
   float: left;
@@ -809,19 +780,60 @@ textarea {
 
 .hero {
   color: #fff;
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
   text-align: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 2.25rem;
 }
 
 .hero h2 {
-    font-size: 36px;
+    margin: 0;
+    padding: 20px 0px;
+    border-top: 1px solid #fff;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
 
 .hero p {
-    font-size: 24px;
-    font-weight: 100;
+    margin-top: 0px;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
   }
+
+@media (min-width: 530px) {
+
+.hero {
+    padding-top: 12px
+}
+    .hero h2 {
+      padding-top: 30px;
+      font-size: 1.85rem;
+      line-height: 2.3rem;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+	}
+
+@media (min-width: 800px) {
+
+.hero {
+    line-height: 2.75rem;
+    padding: 8px 80px 20px 80px
+}
+    .hero h2 {
+      border: none;
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+	}
 
 .hero 
 .teaser a:hover h3 {

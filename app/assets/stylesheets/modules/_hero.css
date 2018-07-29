@@ -6,15 +6,48 @@
 
 .hero {
   color: #fff;
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
   text-align: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 2.25rem;
   h2 {
-    font-size: 36px;
+    margin: 0;
+    padding: 20px 0px;
+    border-top: 1px solid #fff;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
   p {
-    font-size: 24px;
-    font-weight: 100;
+    margin-top: 0px;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+  @mixin atSmall {
+    padding-top: 12px;
+    h2 {
+      padding-top: 30px;
+      font-size: 1.85rem;
+      line-height: 2.3rem;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+  }
+  @mixin atMedium {
+    line-height: 2.75rem;
+    padding: 8px 80px 20px 80px;
+    h2 {
+      border: none;
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
   }
 }
 
