@@ -1,0 +1,41 @@
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+  
+.speaker {
+  margin-bottom: 44px;
+}
+.speaker-sub-head {
+  color: #a9b2b9;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0px;
+  @mixin atSmall {
+    margin-top: 25px;
+  }
+  @mixin atLarge {
+    font-size: 0.875rem;
+  }
+}
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  padding: 22px;
+  margin-top: 40px;
+  @mixin atLarge {
+    margin-top: 88px;
+  }
+  text-align: center;
+  li {
+    text-align: left;
+  }
+}
+.speaker-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+}

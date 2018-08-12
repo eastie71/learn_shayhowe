@@ -56,7 +56,10 @@ img {
   }
 }
 .col-2-3 {
-  width: 66.66%;
+  width: 100%;
+  @mixin atLarge {
+    width: 66.66%;
+  }
 }
 .col-1-3,
 .col-2-3 {
@@ -105,10 +108,16 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  @mixin atLarge {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 h2 {
+  margin-top: 0px;
+  padding-top: 10px;
   font-size: 1.5rem;
   line-height: 2.75rem;
 }
@@ -143,20 +152,6 @@ strong {
 
 cite, em {
   font-style: italic;
-}
-
-/*
-  ========================================
-  Leads
-  ========================================
-*/
-
-.lead {
-  text-align: center;
-}
-.lead p {
-  font-size: 21px;
-  line-height: 33px;
 }
 
 /*
@@ -208,31 +203,6 @@ p a {
     padding-bottom: 44px;
     padding-top: 44px;
   }
-}
-
-
-
- /*
-  ========================================
-  Speakers
-  ========================================
-*/
-  
-.speaker {
-  margin-bottom: 44px;
-}
-.speaker-info {
-  border: 1px solid #dfe2e5;
-  border-radius: 5px;
-  margin-top: 88px;
-  padding: 22px;
-  text-align: center;
-}
-.speaker-info img {
-  border-radius: 50%;
-  height: 130px;
-  margin: -66px 0 22px 0;
-  vertical-align: top;
 }
 
 /*

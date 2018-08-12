@@ -418,8 +418,15 @@ img {
 	}
 
 .col-2-3 {
-  width: 66.66%;
+  width: 100%;
 }
+
+@media (min-width: 960px) {
+
+.col-2-3 {
+    width: 66.66%
+}
+	}
 
 @media (min-width: 960px) {
 
@@ -473,11 +480,21 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.25rem;
-  line-height: 2.75rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
+@media (min-width: 960px) {
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem
+}
+	}
+
 h2 {
+  margin-top: 0px;
+  padding-top: 10px;
   font-size: 1.5rem;
   line-height: 2.75rem;
 }
@@ -526,21 +543,6 @@ strong {
 
 cite, em {
   font-style: italic;
-}
-
-/*
-  ========================================
-  Leads
-  ========================================
-*/
-
-.lead {
-  text-align: center;
-}
-
-.lead p {
-  font-size: 21px;
-  line-height: 33px;
 }
 
 /*
@@ -604,31 +606,6 @@ p a {
     padding-top: 44px
 }
 	}
-
-/*
-  ========================================
-  Speakers
-  ========================================
-*/
-
-.speaker {
-  margin-bottom: 44px;
-}
-
-.speaker-info {
-  border: 1px solid #dfe2e5;
-  border-radius: 5px;
-  margin-top: 88px;
-  padding: 22px;
-  text-align: center;
-}
-
-.speaker-info img {
-  border-radius: 50%;
-  height: 130px;
-  margin: -66px 0 22px 0;
-  vertical-align: top;
-}
 
 /*
   ========================================
@@ -1211,7 +1188,95 @@ textarea {
 	}
 
 .row-alt {
-   background: #cbe2c1; /* fallback if gradient is not supported */
-   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
-   padding: 44px 0 22px 0;
- }
+  background: #cbe2c1; /* fallback if gradient is not supported */
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  padding: 15px 0 15px 0;
+}
+
+@media (min-width: 960px) {
+
+.row-alt {
+     padding: 44px 0 22px 0
+}
+	}
+
+/*
+  ========================================
+  Leads
+  ========================================
+*/
+
+.lead {
+  text-align: center;
+}
+
+.lead p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 960px) {
+
+.lead p {
+    font-size: 1.3125rem;
+    line-height: 2.0625rem
+}
+	}
+
+/*
+  ========================================
+  Speakers
+  ========================================
+*/
+
+.speaker {
+  margin-bottom: 44px;
+}
+
+.speaker-sub-head {
+  color: #a9b2b9;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0px;
+}
+
+@media (min-width: 530px) {
+
+.speaker-sub-head {
+    margin-top: 25px
+}
+	}
+
+@media (min-width: 960px) {
+
+.speaker-sub-head {
+    font-size: 0.875rem
+}
+	}
+
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  padding: 22px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+
+.speaker-info {
+    margin-top: 88px
+}
+	}
+
+.speaker-info li {
+    text-align: left;
+  }
+
+.speaker-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+}
