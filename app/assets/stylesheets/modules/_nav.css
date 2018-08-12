@@ -6,7 +6,7 @@
 
 .nav {
     display: block;
-    @mixin atMedium {
+    @mixin atLarge {
       display: block;
       float: right;
     }
@@ -17,7 +17,7 @@
     }
   	li {
       list-style: none;
-      @mixin atMedium {
+      @mixin atLarge {
         display: inline-block;
   		  margin: 0 10px;
         vertical-align: top;
