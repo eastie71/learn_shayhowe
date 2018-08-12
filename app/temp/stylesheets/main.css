@@ -579,16 +579,31 @@ p a {
 }
 
 .primary-footer small {
-  float: left;
   font-weight: 400;
+  float: none;
 }
+
+@media (min-width: 800px) {
+
+.primary-footer small {
+    float: left
+}
+	}
 
 .primary-footer {
   color: #648880;
   font-size: 14px;
-  padding-bottom: 44px;
-  padding-top: 44px;
+  padding-bottom: 26px;
+  padding-top: 20px;
 }
+
+@media (min-width: 530px) {
+
+.primary-footer {
+    padding-bottom: 44px;
+    padding-top: 44px
+}
+	}
 
 /*
   ========================================
