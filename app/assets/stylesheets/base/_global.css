@@ -52,6 +52,14 @@ img {
   &--no-margin-bottom {
     margin-bottom: 0px;
   }
+  &--small-margin-bottom {
+    p {
+      margin-bottom: 8px;
+      @mixin atLarge {
+        margin-bottom: 22px;
+      }
+    }
+  }
   @mixin atLarge {
     padding-top: 0;
     width: 33.33%;
@@ -123,8 +131,12 @@ h2 {
   padding-top: 10px;
   font-size: 1.5rem;
   line-height: 1.8rem;
+  margin-bottom: 8px;
   @mixin atSmall {
     line-height: 2.75rem;
+  }
+  @mixin atLarge {
+    margin-bottom: 20px;
   }
 }
 h3 {
@@ -279,19 +291,5 @@ table h4 {
   color: #a9b2b9;
 }
 
-/*
-  ========================================
-  Venue
-  ========================================
-*/
 
-.venue-theatre {
-  margin-bottom: 66px;
-}
-.venue-hotel {
-  margin-bottom: 22px;
-}
-.venue-map {
-  height: 264px;
-}
 

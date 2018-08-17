@@ -1,0 +1,25 @@
+/*
+  ========================================
+  Venue
+  ========================================
+*/
+
+.venue-theatre {
+	margin-bottom: 0px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dfe2e5;
+	@mixin atLarge {
+  	margin-bottom: 66px;
+  	border-bottom: none;
+  	padding-bottom: 0px;
+	}
+}
+.venue-hotel {
+
+	@mixin atLarge {
+  	margin-bottom: 22px;
+	}
+}
+.venue-map {
+  height: 264px;
+}
