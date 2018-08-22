@@ -1,4 +1,5 @@
 .site-header {
+  z-index: 2;
   a {
     color: #fff;
   }

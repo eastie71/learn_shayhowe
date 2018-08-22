@@ -774,6 +774,10 @@ p a {
     margin-bottom: 22px;
   }
 
+.site-header {
+  z-index: 2;
+}
+
 .site-header a {
     color: #fff;
   }
