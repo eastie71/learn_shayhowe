@@ -10506,7 +10506,7 @@ var MobileMenu = function () {
 		// inside the <header> is elements that are referred to in the constructor
 		// Without waiting for the entire page to load - it does not work. (I believe it is bc it
 		// cannot find the elements to bind to)
-		(0, _jquery2.default)(window).on("load resize", this.constructor_setup.bind(this));
+		(0, _jquery2.default)(window).on("load", this.constructor_setup.bind(this));
 	}
 
 	_createClass(MobileMenu, [{

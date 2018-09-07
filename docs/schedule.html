@@ -7,11 +7,38 @@
     <title>Styles Conference</title>
     <link rel="stylesheet" href="assets/styles/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400">
-    <script src="assets/scripts/Vendor.js"></script>
 </head>
 
   <body>
-    <div id="headerContent"></div>
+     <header class="site-header">
+      <div class="wrapper">
+        <h1 class="site-header__logo">
+          <a href="index.html">Styles </br> Conference</a>
+        </h1>
+        <h3 class="site-header__tagline">August 24&ndash;26th &mdash; Chicago, IL</h3>
+        <div class="site-header__menu-icon">
+            <!-- Rather than have an empty div for the top bar of the hamburger menu icon - use CSS ::before (ie. __menu-icon::before) to style this 
+            <div class="site-header__menu-icon__top"></div>
+            -->
+            <div class="site-header__menu-icon__middle"></div>
+            <!-- Rather than have an empty div for the bottom bar of the hamburger menu icon - use CSS ::after (ie. __menu-icon::after) to style this.
+            <div class="site-header__menu-icon__bottom"></div>
+             -->
+            <div class="site-header__menu-icon__close">X</div>
+        </div>
+        <div class="site-header__menu">
+          <nav class="nav nav__primary">
+            <ul>
+              <li><a href="index.html">Home</a></li><!--
+              --><li><a href="speakers.html">Speakers</a></li><!--
+              --><li><a href="schedule.html">Schedule</a></li><!--
+              --><li><a href="venue.html">Venue</a></li><!--
+              --><li><a href="register.html">Register</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
     <!-- Main content -->
 
@@ -109,6 +136,6 @@
     </footer>
 
   </body>
-  <script src="assets/scripts/header.js"></script>
+  <script src="assets/scripts/Vendor.js"></script>
   <script src="assets/scripts/app.js"></script>
 </html>
